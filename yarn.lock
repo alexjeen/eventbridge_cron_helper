@@ -4603,6 +4603,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "@heroicons/react@npm:2.0.18"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 3cef7f67c65f8b00dc4f23788e468e661a24bd805f80e3b5514a986d69c91ef05407cf50078691573eced47147db87a9bd00cc165e4fecd2a9657cbaf3eaafb5
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -12060,6 +12069,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cron-parser@npm:^4.8.1":
+  version: 4.8.1
+  resolution: "cron-parser@npm:4.8.1"
+  dependencies:
+    luxon: ^3.2.1
+  checksum: d14bb09277969085068e97b9d65b71175f66065c842f11499890903ac137d476e7d349cf2c026d8e53ac4a5503101ca1f96b6ecfb646063a1ed2440533729776
+  languageName: node
+  linkType: hard
+
 "cross-env@npm:7.0.3":
   version: 7.0.3
   resolution: "cross-env@npm:7.0.3"
@@ -18596,6 +18614,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:^3.2.1":
+  version: 3.3.0
+  resolution: "luxon@npm:3.3.0"
+  checksum: 47f8e1e96b25441c799b8aa833b3f007fb1854713bcffc8c3384eda8e61fc9af1f038474d137274d2d386492f341c8a8c992fc78c213adfb3143780feba2776c
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.4.4, lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -19273,6 +19298,13 @@ __metadata:
   version: 1.0.1
   resolution: "module-not-found-error@npm:1.0.1"
   checksum: e57250016b320ef9d0e0037fdb63fb279ca93100a0cee3ef6e90139cbec734215be4a70857dfc0d62ee353d9f8126d2882aa0a80dba49b69292901263a21ea69
+  languageName: node
+  linkType: hard
+
+"moment@npm:^2.29.4":
+  version: 2.29.4
+  resolution: "moment@npm:2.29.4"
+  checksum: 844c6f3ce42862ac9467c8ca4f5e48a00750078682cc5bda1bc0e50cc7ca88e2115a0f932d65a06e4a90e26cb78892be9b3ca3dd6546ca2c4d994cebb787fc2b
   languageName: node
   linkType: hard
 
@@ -25879,11 +25911,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@heroicons/react": ^2.0.18
     "@redwoodjs/forms": 5.4.2
     "@redwoodjs/router": 5.4.2
     "@redwoodjs/web": 5.4.2
     "@tailwindcss/forms": ^0.5.3
     autoprefixer: ^10.4.14
+    cron-parser: ^4.8.1
+    moment: ^2.29.4
     postcss: ^8.4.24
     postcss-loader: ^7.3.3
     prop-types: 15.8.1
