@@ -12,6 +12,7 @@ import { Router, Route } from '@redwoodjs/router'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/" page={CronPage} name="cron" />
       <Route notfound page={NotFoundPage} />
     </Router>
   )
