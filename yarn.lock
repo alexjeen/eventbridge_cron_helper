@@ -12078,6 +12078,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cron-to-quartz@npm:^1.4.7":
+  version: 1.4.7
+  resolution: "cron-to-quartz@npm:1.4.7"
+  checksum: eb6431e0f6ba5b2b59f29e1aca7ffdfd9ff9c14edbe44d4c2e0476a89eea6914534d3f5ead1a28f094b18918c5b3d313ecb78ccc4a87d870a8edcbdab8c8f4b7
+  languageName: node
+  linkType: hard
+
+"cronstrue@npm:^2.27.0":
+  version: 2.27.0
+  resolution: "cronstrue@npm:2.27.0"
+  bin:
+    cronstrue: bin/cli.js
+  checksum: 5a98dc4f5a5ef0201665d7f9e83ae5f37d88ea58bd0e9389d8d16ed54237dbcf75f7ecce80c921a7198c78e8f2bc3a7bd724d9419135e1ef93588d1d6d64faab
+  languageName: node
+  linkType: hard
+
 "cross-env@npm:7.0.3":
   version: 7.0.3
   resolution: "cross-env@npm:7.0.3"
@@ -25918,6 +25934,8 @@ __metadata:
     "@tailwindcss/forms": ^0.5.3
     autoprefixer: ^10.4.14
     cron-parser: ^4.8.1
+    cron-to-quartz: ^1.4.7
+    cronstrue: ^2.27.0
     moment: ^2.29.4
     postcss: ^8.4.24
     postcss-loader: ^7.3.3

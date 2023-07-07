@@ -1,10 +1,16 @@
+import { useState } from 'react'
+
 import { ClockIcon } from '@heroicons/react/24/outline'
 
 import { MetaTags } from '@redwoodjs/web'
 
+import EventBridgeCron from 'src/components/EventBridgeCron/EventBridgeCron'
 import RegularCron from 'src/components/RegularCron/RegularCron'
 
 const CronPage = () => {
+  const [cron, setCron] = useState('5 12 * * *')
+  const [humanReadable, setHumanReadable] = useState()
+  const [nextRun, setNextRun] = useState()
   return (
     <>
       <MetaTags title="Cron" description="AWS EventBridge cron helper" />
@@ -18,14 +24,13 @@ const CronPage = () => {
                 alt="AWS EventBridge"
               />
               <h2 className="mt-10 text-center text-xl italic font-semibold  leading-9 tracking-tight text-white">
-                &quot;Every day at midnight&quot;
+                &quot;{humanReadable}&quot;
               </h2>
               <h3 className="mt-1 text-center text-xs text-white">
                 <ClockIcon className="h-4 w-4 text-indigo-400 inline" /> Next
-                run at 2023-05-01 12:00
+                run at {nextRun}
               </h3>
             </div>
-
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
               <form className="space-y-6" action="#" method="POST">
                 <div>
@@ -36,25 +41,14 @@ const CronPage = () => {
                     Regular cron
                   </label>
                   <div className="mt-2">
-                    <RegularCron></RegularCron>
-                  </div>
-                  <div className="text-xs mt-2 grid text-white grid-cols-5">
-                    <div className="w-full text-center">minute</div>
-                    <div className="w-full text-center">hour</div>
-                    <div className="w-full text-center">
-                      day
-                      <br />
-                      (month)
-                    </div>
-                    <div className="w-full text-center">month</div>
-                    <div className="w-full text-center">
-                      day
-                      <br />
-                      (week)
-                    </div>
+                    <RegularCron
+                      cron={cron}
+                      setCron={setCron}
+                      setHumanReadable={setHumanReadable}
+                      setNextRun={setNextRun}
+                    ></RegularCron>
                   </div>
                 </div>
-
                 <div>
                   <div>
                     <label
@@ -65,14 +59,19 @@ const CronPage = () => {
                     </label>
                   </div>
                   <div className="mt-2">
-                    <input
-                      id="eventbridge"
-                      name="eventbridge"
-                      type="text"
-                      defaultValue="rate(5 minutes)"
-                      required
-                      className="block w-full h-20 text-center font-semibold text-4xl rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:leading-6"
-                    />
+                    <EventBridgeCron cron={cron}></EventBridgeCron>
+                    <p className="text-gray-400 text-xs text-center mt-5">
+                      Note that EventBridge crons are based on the{' '}
+                      <a
+                        target="_blank"
+                        className="text-underline text-indigo-400 hover:text-indigo-300"
+                        href="http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html"
+                        rel="noreferrer"
+                      >
+                        Quartz format
+                      </a>{' '}
+                      so they are not fully compatible with regular crons
+                    </p>
                   </div>
                 </div>
               </form>
