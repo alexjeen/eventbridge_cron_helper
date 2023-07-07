@@ -7,18 +7,16 @@ import moment from 'moment'
 const RegularCron = ({ setHumanReadable, setNextRun, cron, setCron }) => {
   const [error, setError] = useState('')
   const validateCron = (cron: string) => {
-    const cronSplit = cron.split(/\s+/)
-    const cronJoin = cronSplit.slice(0, 5).join(' ')
     setError('')
     try {
-      const interval = parser.parseExpression(cronJoin)
+      const interval = parser.parseExpression(cron)
       const next = interval.next()
-      setHumanReadable(cronstrue.toString(cronJoin))
+      setHumanReadable(cronstrue.toString(cron))
       setNextRun(moment(next.toDate()).calendar())
     } catch (err) {
       setError((err as Error).message)
     }
-    setCron(cronJoin)
+    setCron(cron)
   }
   useEffect(() => {
     validateCron(cron)

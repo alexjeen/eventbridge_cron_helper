@@ -19,12 +19,15 @@
     "cron-parser": "^4.8.1",
     "cron-to-quartz": "^1.4.7",
     "cronstrue": "^2.27.0",
+    "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/lodash.debounce": "^4.0.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "postcss-loader": "^7.3.3",

@@ -8,7 +8,7 @@ import EventBridgeCron from 'src/components/EventBridgeCron/EventBridgeCron'
 import RegularCron from 'src/components/RegularCron/RegularCron'
 
 const CronPage = () => {
-  const [cron, setCron] = useState('5 12 * * *')
+  const [cron, setCron] = useState('5 * * * *')
   const [humanReadable, setHumanReadable] = useState()
   const [nextRun, setNextRun] = useState()
   return (
@@ -70,7 +70,8 @@ const CronPage = () => {
                       >
                         Quartz format
                       </a>{' '}
-                      so they are not fully compatible with regular crons.{' '}
+                      so they are not fully compatible with regular crons. .
+                      This page does not show rate() expressions.{' '}
                       <a
                         href="https://github.com/elasticscale/eventbridge_cron_helper/issues/new"
                         className="text-underline text-indigo-400 hover:text-indigo-300"
