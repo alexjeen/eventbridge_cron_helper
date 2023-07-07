@@ -12,17 +12,6 @@ api:
     memory: 2G
     health_check: "/api/health"
 
-  resources:
-    - name: eventbridge_cron_helper-db
-      engine: mysql
-      version: 13
-      type: database
-      
-
-  # If you use data migrations, use the following instead:
-  # migration: ["yarn", "rw", "prisma", "migrate", "deploy", "&&", "yarn", "rw", "data-migrate", "up"]
-  migration: ["yarn", "rw", "prisma", "migrate", "deploy"]
-
 web:
   type: frontend
   assets_path: "web/dist"
