@@ -70,12 +70,19 @@ const CronPage = () => {
                       >
                         Quartz format
                       </a>{' '}
-                      so they are not fully compatible with regular crons
+                      so they are not fully compatible with regular crons.{' '}
+                      <a
+                        href="https://github.com/elasticscale/eventbridge_cron_helper/issues/new"
+                        className="text-underline text-indigo-400 hover:text-indigo-300"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Report a bug!
+                      </a>
                     </p>
                   </div>
                 </div>
               </form>
-
               <p className="mt-10 text-center text-sm text-gray-400">
                 Built by{' '}
                 <a

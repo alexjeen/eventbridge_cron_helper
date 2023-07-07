@@ -38,7 +38,7 @@ const RegularCron = ({ setHumanReadable, setNextRun, cron, setCron }) => {
         }
       />
       <div className="text-red-900 mt-2 text-center text-xs">{error}</div>
-      <div className="text-xs mt-2 grid text-white grid-cols-5">
+      <div className="text-xs mt-2 grid text-gray-700 grid-cols-5">
         <div className="w-full text-center">minute</div>
         <div className="w-full text-center">hour</div>
         <div className="w-full text-center">
