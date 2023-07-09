@@ -73,7 +73,7 @@ const CronPage = () => {
                       so they are not fully compatible with regular crons. .
                       This page does not show rate() expressions.{' '}
                       <a
-                        href="https://github.com/elasticscale/eventbridge_cron_helper/issues/new"
+                        href="https://github.com/alexjeen/eventbridge_cron_helper/issues/new"
                         className="text-underline text-indigo-400 hover:text-indigo-300"
                         target="_blank"
                         rel="noreferrer"
