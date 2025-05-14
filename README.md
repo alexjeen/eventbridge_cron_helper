@@ -1,4 +1,4 @@
-# README
+# README (DEPLOY)
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
